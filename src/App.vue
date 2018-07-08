@@ -10,6 +10,7 @@
     <router-view class="navbar" name="nav" />
 
     <div class="content">
+      <mt-spinner type="triple-bounce" v-show="$store.state.isLoading"></mt-spinner>
       <router-view/>
     </div>
   </div>
@@ -23,6 +24,7 @@ export default {
 
 <style>
 body {
+  font-family: Microsoft Yahei, '微软雅黑';
   margin: 0;
   background: #fcfcfc;
 }
@@ -40,7 +42,7 @@ body {
   box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
 }
 .content {
-  padding-top: 8.125rem;
+  padding-top: 8.255rem;
 }
 
 .new_song_swipe {
@@ -51,5 +53,8 @@ body {
 }
 .mint-cell-wrapper {
   padding: 2rem 0;
+}
+.mint-spinner-triple-bounce {
+  text-align: center;
 }
 </style>

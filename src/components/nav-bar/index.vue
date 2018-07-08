@@ -35,5 +35,6 @@ export default {
 }
 .mint-navbar .mint-tab-item.is-selected {
   border-bottom: 0.26rem solid #33a3f5;
+  margin-bottom: 0;
 }
 </style>

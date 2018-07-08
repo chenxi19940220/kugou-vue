@@ -5,11 +5,12 @@ Vue.use(Vuex)
 
 let store = new Vuex.Store({
   state: {
-    isLoading: true
+    isLoading: true,
+    kuGouSize: 400
   },
   mutations: {
     updatedIsLoading (state, loading) {
-      state.isLoading = loading
+      state.loading = loading
     }
   }
 })

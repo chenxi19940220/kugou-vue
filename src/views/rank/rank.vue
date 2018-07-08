@@ -1,7 +1,7 @@
 <template>
   <div class="rank">
     <mt-cell class="song_cell" v-for="item in list" :key="item.id" :title="item.rankname" is-link>
-      <img class="ran_img" slot="icon" src="http://imge.kugou.com/mcommon/400/20150717/20150717100030907982.png" />
+      <img class="ran_img" slot="icon" :src="item.imgurl.replace('{size}', kuGouSize)" />
     </mt-cell>
   </div>
 </template>
@@ -17,12 +17,17 @@ export default {
       list: []
     }
   },
+  computed: {
+    kuGouSize (state) {
+      return this.$store.state.kuGouSize
+    }
+  },
   async created () {
     let { data } = await getRankLists({loading: 2})
-    console.log(data)
+    // console.log(data)
     this.rankImg = data
     this.list = data.data
-    console.log(this.list)
+    // console.log(this.list)
   }
 }
 </script>
@@ -41,5 +46,30 @@ export default {
 .rank img {
   width: 6.6875rem;
   height: 6.6875rem;
+}
+.rank .song_cell {
+  padding-left: 0.875rem;
+}
+.rank .mint-cell-wrapper {
+  padding: 0.875rem 0 0.9375rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.rank .mint-cell-text {
+  margin-left: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: normal;
+}
+.rank .mint-cell-mask::after {
+  background: transparent;
+}
+.rank .mint-cell-allow-right::after {
+  width: 0.8rem;
+  height: 1.75rem;
+  margin-top: -0.875rem;
+  border: none;
+  background: url(../../assets/img/arrow_icon.png) no-repeat;
+  background-size: 100%;
+  -webkit-transform: translateY(0%) rotate(0deg);
+  transform: translateY(0%) rotate(0deg);
 }
 </style>

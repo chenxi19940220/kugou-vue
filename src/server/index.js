@@ -4,13 +4,13 @@ import store from '@/store'
 let oneLeve = axios.create({
   responseType: 'json',
   transformRequest (data) {
-    console.log(data)
+    // console.log(data)
     // 发送请求
     store.commit('updatedIsLoading', true)
     return data
   },
   transformResponse (data) {
-    console.log(data)
+    // console.log(data)
     store.commit('updatedIsLoading', false)
     let o = {}
     if (data.list) {
@@ -62,8 +62,8 @@ export const getSingers = (item) => {
 
 // 根据歌手分类id，获取歌手分类歌手
 
-export const getSingerList = (params = {classid: ''}) => {
-  return oneLeve(`/proxy/singer/list/${params.classid}?json=true`)
+export const getSingerList = (item = {classid: ''}) => {
+  return oneLeve(`/proxy/singer/list/${item.classid}?json=true`, {data: item})
 }
 
 // 根据歌手id，获取歌手歌曲
