@@ -6,12 +6,12 @@ let oneLeve = axios.create({
   transformRequest (data) {
     // console.log(data)
     // 发送请求
-    store.commit('updatedIsLoading', true)
+    store.commit('updatedIsLoading', {isLoading: true})
     return data
   },
   transformResponse (data) {
     // console.log(data)
-    store.commit('updatedIsLoading', false)
+    store.commit('updatedIsLoading', {isLoading: false})
     let o = {}
     if (data.list) {
       o.data = data.list

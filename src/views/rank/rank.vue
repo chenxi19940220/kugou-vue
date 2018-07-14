@@ -33,43 +33,39 @@ export default {
 </script>
 
 <style>
-.ran-img {
-  width: 2rem;
-  height: 2rem;
-}
-.rank-cell {
-  padding: 5px 0;
-}
-.song-cell {
-  padding: 0.2rem 0;
-}
-.rank img {
-  width: 6.6875rem;
-  height: 6.6875rem;
-}
 .rank .song_cell {
-  padding-left: 0.875rem;
+  padding-left: 0.34rem;
 }
 .rank .mint-cell-wrapper {
-  padding: 0.875rem 0 0.9375rem;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 0.34rem 0;
+  border-bottom: 0.02rem solid #e5e5e5;
+}
+.ran_img {
+  width: 2.61rem;
+  height: 2.61rem;
 }
 .rank .mint-cell-text {
-  margin-left: 1.25rem;
-  font-size: 1.375rem;
+  margin-left: 0.34rem;
+  font-size: 0.48rem;
   font-weight: normal;
 }
 .rank .mint-cell-mask::after {
   background: transparent;
 }
 .rank .mint-cell-allow-right::after {
-  width: 0.8rem;
-  height: 1.75rem;
-  margin-top: -0.875rem;
+  width: 0.29rem;
+  height: 0.48rem;
+  margin-top: -0.24rem;
   border: none;
   background: url(../../assets/img/arrow_icon.png) no-repeat;
   background-size: 100%;
   -webkit-transform: translateY(0%) rotate(0deg);
   transform: translateY(0%) rotate(0deg);
+}
+.rank .rank-cell {
+  padding: 5px 0;
+}
+.rank .song-cell {
+  padding: 0.2rem 0;
 }
 </style>

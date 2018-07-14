@@ -69,8 +69,27 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-
+    assetsPublicPath: './',
+    proxyTable: {
+       // 以 /proxy/为开头的适合这个规则
+      "/proxy/": {
+        // 目标地址
+        target: "http://m.kugou.com",
+         // false为http访问，true为https访问
+        "secure": false,
+        // 跨域访问设置
+        "changeOrigin": true,
+        // 路径改写规则
+        "pathRewrite": {
+           // 以 /proxy/为开头改写为 ''
+          "^/proxy": ""
+        },
+        "headers": {
+          // 设置请求头，伪装成手机端访问
+          "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36"
+        }
+      }
+    },
     /**
      * Source Maps
      */

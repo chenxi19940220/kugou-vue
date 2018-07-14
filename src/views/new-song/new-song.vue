@@ -29,30 +29,35 @@ export default {
     // console.log(data)
     this.banner = data.banner
     this.list = data.data
+    this.$store.commit('updatedIsLoading', {isLoading: false})
   }
 }
 </script>
 
 <style>
 .new_songs .new_song_swipe {
-  height: 10rem;
+  height: 4.13rem;
+  margin-top: 0.2rem;
 }
 .new_songs .new_song_swipe img {
-  width: 100%;
+  max-width: 100%;
+  height: 4.13rem;
+}
+.song_cell {
+  padding-left: 0.34rem;
 }
 .new_songs .mint-cell-wrapper {
-  line-height: 1.625rem;
-  padding-left: 0.5rem;
-  padding-right: 2.657rem;
-  border-bottom: 1px solid #e5e5e5;
+  line-height: 0.53rem;
+  padding: 0.7rem 1.23rem 0.68rem 0.17rem;
+  border-bottom: 0.02rem solid #e5e5e5;
 }
 .new_songs .mint-cell-text {
-  font-size: 1.25rem;
+  font-size: 0.48rem;
 }
 .new_songs .mint-cell-allow-right::after {
-  width: 1.0357rem;
-  height: 1.0814rem;
-  margin-top: -0.5407rem;
+  width: 0.51rem;
+  height: 0.51rem;
+  margin-top: -0.255rem;
   border: none;
   background: url(../../assets/img/download_icon_2.png) no-repeat;
   background-size: 100%;

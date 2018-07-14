@@ -23,18 +23,18 @@ export default {
 </script>
 
 <style>
-.mint-tab-item-label {
-  font-size: 1.4rem;
-  color: #333;
-}
 .navbar {
-  padding: 0 0.875rem;
+  padding: 0 0.34rem;
 }
 .mint-navbar .mint-tab-item {
-  padding: 1.25rem 0 1.375rem;
+  padding: 0.48rem 0 0.43rem;
+}
+.mint-tab-item-label {
+  font-size: 0.53rem;
+  color: #333;
 }
 .mint-navbar .mint-tab-item.is-selected {
-  border-bottom: 0.26rem solid #33a3f5;
+  border-bottom: 0.1rem solid #33a3f5;
   margin-bottom: 0;
 }
 </style>
