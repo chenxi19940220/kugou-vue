@@ -73,7 +73,7 @@ export default {
 .plist .mint-cell-value i.plist_music {
   display: inline-block;
   width: 0.34rem;
-  height: 0.29rem;
+  height: 0.34rem;
   background: url(../../assets/img/icon_music.png) no-repeat;
   background-size: 100%;
 }
